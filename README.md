@@ -113,3 +113,14 @@ height is roughly symmetric. In addition to this, it is important to note the ex
 in the Volumes data which could indicate an experimental error as well as cause disruptions in
 the analysis of the data as it affects both the mean and median.
 
+<img width="662" alt="Screen Shot 2020-11-16 at 6 55 37 PM" src="https://user-images.githubusercontent.com/66921930/99322166-5e96f680-283d-11eb-9347-bb1f1e76e1f7.png">
+
+Another way of assessing whether or not a dataset is distributed approximately normal is
+to use a normal probability plot (Engineering Statistics Handbook, n.d.). By applying the R code
+in Figure 9 and implementing the function for a Q-Q plot which sets two sets of quantiles against
+one another, the results in Figure 10 provide a quick visual to whether an assumption made on
+the dataset being normally distributed is true. The assumption is that if both sets of quantiles originated from the same distribution the points of the scatterplot should form a relatively
+straight line (Ford, 2015). A Simulation dataset is also included as a part of the visual to provide
+a baseline. What we can interpret from Figure 10, is that both the Height and Diameter variables
+have a noticeably more normal distribution than that of Volume, in that the points fall closer to a
+straight line. The presence of outliers also is detectable in the Volume data from the Q-Q plot.
