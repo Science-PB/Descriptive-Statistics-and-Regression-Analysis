@@ -124,3 +124,22 @@ straight line (Ford, 2015). A Simulation dataset is also included as a part of t
 a baseline. What we can interpret from Figure 10, is that both the Height and Diameter variables
 have a noticeably more normal distribution than that of Volume, in that the points fall closer to a
 straight line. The presence of outliers also is detectable in the Volume data from the Q-Q plot.
+
+<img width="631" alt="Screen Shot 2020-11-16 at 6 56 57 PM" src="https://user-images.githubusercontent.com/66921930/99322243-93a34900-283d-11eb-802f-86f50e73d2ea.png">
+<img width="656" alt="Screen Shot 2020-11-16 at 6 57 04 PM" src="https://user-images.githubusercontent.com/66921930/99322246-943bdf80-283d-11eb-9b4d-43531b72cc38.png">
+
+# Multiple Regression Analysis
+
+Multiple linear regression analysis has three major uses in statistics. These uses consist of
+identifying the strength of the effect independent variables have on a dependent variable, as a
+forecaster for how the dependent variable will change when the independent variables are
+modified, and as a predictor for trends and future values (Statistics Solutions, 2020). Two sets of
+data from R will be utilized to demonstrate the use cases of multiple regression, “Rubber” and
+“oddbooks”. There are three variables in the “Rubber” data set, Loss (the abrasion loss in gm/hr),
+Hardness (the hardness in Shore units) and Tensile (tensile strength in kg/sq m) while
+“oddbooks” is composed of Thickness (mm), Height (cm), Width (cm), and Weight (g).
+A starting foundation when working with any dataset is to understand the main summary
+components of the data. Similar to the five-number summary referenced earlier but with the
+addition of the mean, the summaries for “Rubber” and “oddbooks” can be found in Figure 11.
+
+
