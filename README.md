@@ -101,4 +101,15 @@ addition to the skew the Volume plot, displays a steep drop in the distribution 
 possible implication of the presence of outliers. Verification of the presence of outliers will be
 able to be confirmed through the use of a boxplot.
 
+<img width="652" alt="Screen Shot 2020-11-16 at 6 53 58 PM" src="https://user-images.githubusercontent.com/66921930/99322048-28f20d80-283d-11eb-8e5c-50408b302df1.png">
+<img width="626" alt="Screen Shot 2020-11-16 at 6 54 04 PM" src="https://user-images.githubusercontent.com/66921930/99322049-298aa400-283d-11eb-8e90-688d6be7a951.png">
+
+A boxplot is a graph that relies on the elements of a five-number summary. What it tells
+the viewer is whether the distribution is symmetric, positively, or negatively skewed. It does this
+through both the median location as well as the line length (Bluman, 2018, p.170). According to
+the boxplot results for the “trees” dataset shown in Figure 8 with R coding provided in Figure 7,
+it can be deduced that the sample trees diameters and volumes are positively skewed, while their
+height is roughly symmetric. In addition to this, it is important to note the existence of an outlier
+in the Volumes data which could indicate an experimental error as well as cause disruptions in
+the analysis of the data as it affects both the mean and median.
 
