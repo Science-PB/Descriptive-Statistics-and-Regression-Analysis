@@ -35,3 +35,51 @@ while the output of the five-number summary can be seen in Figure 2.
 
 
 <img width="402" alt="Screen Shot 2020-11-16 at 6 27 08 PM" src="https://user-images.githubusercontent.com/66921930/99321473-dfed8980-283b-11eb-80e4-cfc65d103a04.png">
+
+The results of the five-
+number summary can be
+interpreted as follows, for
+Diameter (in inches) the range of
+the dataset is 8.3 to 20.6 with
+25% of the data falling below 11, 50% falling below 12.9 and 75% falling below 16. For Height
+(in feet), the range of the dataset is 63 to 87 with 25% of the data falling below 72, 50% falling
+below 76 and 75% falling below 80. Our last tree attribute of Volume (in cubic feet) resulted in a
+range of 10.2 to 77 with 25% of the data falling below 19.1, 50% falling below 24.2 and 75%
+falling below 38.3.
+
+<img width="386" alt="Screen Shot 2020-11-16 at 6 47 50 PM" src="https://user-images.githubusercontent.com/66921930/99321660-54c0c380-283c-11eb-8fa3-616cb5eaedf1.png">
+
+
+From this we can see that of the three different tree attributes Volume appears to be the
+one most prone to exhibiting outliers as the majority of the data points fall well below the max.
+Height gives the impression of a more symmetric normal distribution with Diameter showcasing
+more of a right-skewed distribution Overall, the five-number summary provides a satisfactory
+numerical overview of the dataset allowing a foundational understanding of the main points
+regardless of the quantity of variables in a data frame.
+
+# The Power of Graphs
+
+It is a common viewpoint that the use of graphs leads to an increased understanding and a
+heightened portrayal of patterns and/or trends in a dataset. Utilizing the same “trees” data from
+before, Figures 4, 6, 8 and 10, will present the data as a straight-line regression, a histogram and
+density plot, a boxplot and finally as normal probability plots. What we can expect from these
+graphical depictions is to visually be able to assess if a normal distribution exists for each of the
+various attributes.
+Single Line Regression is a statistical method utilized to summarize and study the
+relationship between two quantitative variables (Penn State, 2018). This is done through the use
+of a scatter plot which visually demonstrates if the relationship between the variables is positive,
+negative, curvilinear or if no discernable relationship exists (Bluman, 2018, p.563). In the R code
+provided in Figure 3, the use of the pairs function allows for the identification of linear
+relationships for each variable combination in the dataset. Extrapolating this and focusing on
+three main variable combinations, the abline function is applied to add a regression line with the
+linear model (lm) function identifying the intercept and slope, as shown in Figure 4.
+What Figure 4 showcases is that there is a positive relationship between each of the
+variable combinations, however certain variables have a stronger linear correlation to each other.
+In the case of the trees dataset, when Diameter is the dependent variable and Volume the
+independent variable, a strong correlation exists as the residuals, or distance between the actual
+value and predicted value are low. For the remaining showcased linear regressions, Diameter vs
+Height and Height vs Volume, there is much less correlation between the two variables and the
+residuals are much higher, meaning the fit is less ideal and the prediction of the dependent from
+the independent will not be as promising.
+
+
