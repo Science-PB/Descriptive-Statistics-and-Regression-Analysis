@@ -82,4 +82,23 @@ Height and Height vs Volume, there is much less correlation between the two vari
 residuals are much higher, meaning the fit is less ideal and the prediction of the dependent from
 the independent will not be as promising.
 
+<img width="681" alt="Screen Shot 2020-11-16 at 6 51 22 PM" src="https://user-images.githubusercontent.com/66921930/99321857-c39e1c80-283c-11eb-802c-61b37b7c2110.png">
+
+
+While single line regression focused on comparing two variables within a dataset a
+histogram is used to represent the distribution of data amongst a single variable. There are
+multiple ways to showcase this, two popular methods being frequency and density. Density plotsaid in displaying where values are concentrated over an interval, this bears an advantage in that it
+better represents the distribution shape as it is not affected by the bars of a histogram (The Data
+Visualisation Catalogue, n.d.).
+As represented in the R code in Figure 5, the probability function is inserted into the
+histogram (hist) function to enable the histogram to plot density instead of frequency on the y-
+axis. A density plot is then enabled through the use of the line function which superimposes it on
+the histogram. What the histogram and density plots for the “trees” dataset end up showcasing is
+a visual representation of the positively skewed Diameter and Volume variables with a roughly
+normally distributed Height variable, further enforcing what was ascertained numerically from
+the five-number summary. The histogram and density plots for “trees” can be seen in Figure 6. In
+addition to the skew the Volume plot, displays a steep drop in the distribution leading to a
+possible implication of the presence of outliers. Verification of the presence of outliers will be
+able to be confirmed through the use of a boxplot.
+
 
