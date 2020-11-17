@@ -179,6 +179,7 @@ error, as well as a significant p-value the indication is that a relationship ex
 based on the normalized data is that a stronger tire will take longer to experience “wear and
 tear”.
 
+<img width="637" alt="Screen Shot 2020-11-16 at 7 55 07 PM" src="https://user-images.githubusercontent.com/66921930/99326159-bf2a3180-2845-11eb-91bc-6706d24d9ac8.png">
 
 
 The “oddbooks” dataset based on the same methodology represents a positive change for
@@ -188,3 +189,24 @@ opposite result of decreasing by 21.95 cm for every 1 g of upward weight growth.
 “Rubber” data set, the standard error of “oddbooks” suggests a relatively high level of variance.
 The t and p-values both indicate that a relationship exists. A prediction based on the normalized
 data is that as weight increases, so does thickness and width, while height decreases.
+
+<img width="624" alt="Screen Shot 2020-11-16 at 7 55 14 PM" src="https://user-images.githubusercontent.com/66921930/99326165-c2bdb880-2845-11eb-9b4b-9d4cc12583bb.png">
+
+While numerically the summary function is a solid foundation to understanding a dataset
+it is not as easily consumable as that of a graph to identify relationships and trends in the data.
+Figure 16, provides R coding used to generate both a scatterplot and a correlation matrix.
+Through the use of a scatterplot matrix, the observation of bivariate relationships in the “Rubber”
+dataset is easily identifiable, as seen in Figure 17. Each scatterplot provides a visual of the
+correlation between each combination of two variables in the dataset.
+
+
+
+When expanded further into a correlation matrix, the relationship between abrasion loss,
+hardness, and tensile strength of rubber tires during accelerated testing is clearly showcased, as
+seen in Figure 18. A significant learning to take away from the matrix is that the harder a tire is
+the less abrasion loss it will experience. Similarly, there is a relationship between tensile strength
+and abrasion loss, however as depicted
+in the matrix it is not as
+strong as the relationship
+between that of hardness and
+abrasion loss.
