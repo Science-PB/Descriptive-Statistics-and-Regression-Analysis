@@ -142,4 +142,27 @@ A starting foundation when working with any dataset is to understand the main su
 components of the data. Similar to the five-number summary referenced earlier but with the
 addition of the mean, the summaries for “Rubber” and “oddbooks” can be found in Figure 11.
 
+<img width="616" alt="Screen Shot 2020-11-16 at 6 58 44 PM" src="https://user-images.githubusercontent.com/66921930/99322370-cbaa8c00-283d-11eb-9598-3373e1659521.png">
+
+Another way to numerically understand the data is to use logarithms. By utilizing the
+linear model with coefficients in addition to summary, inspection of the regression output is able
+to be conducted as showcased in Figure 12. The results for “Rubber” when looking at Loss to
+Hardness indicates that in regards to the average tire rubber there is an abrasion loss of 14.734
+gm/hr and for every 1 Shore unit of Hardness the abrasion loss decreases by 2.29 with a variance
+of 0.45. When increasing the data to include Tensile strength as well, the same logic can be
+applied to note that the average abrasion loss is 23.66 and for every 1 Shore unit of Hardness the
+abrasion loss decreases by 2.75 and for every 1 kg/sq m of Tensile strength the abrasion loss
+decreases by 1.353. Variances are 0.38 and 0.33 respectively. Overall the summary output did
+not appear to represent a significant difference in the measuring unit and the relationship
+between the variables seems less proportional.
+
+
+
+Utilizing the same methods for “oddbooks” the results are broken out in Figure 13 to
+show how the weight of 12 books is proportional to thickness, thickness with height, and
+thickness with height and width. Comparing weight to thickness solely, we see that as the
+thickness of a book increases by 1 mm the weight decreases roughly 1 g, with a very small
+variance factor. The final output through the use of the summary function indicates that weight is
+proportional to the combination of thickness, height, and width which promotes the reason why
+the log function is needed on the “oddbooks” dataset.
 
