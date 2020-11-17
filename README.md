@@ -199,6 +199,9 @@ Through the use of a scatterplot matrix, the observation of bivariate relationsh
 dataset is easily identifiable, as seen in Figure 17. Each scatterplot provides a visual of the
 correlation between each combination of two variables in the dataset.
 
+<img width="657" alt="Screen Shot 2020-11-16 at 7 57 19 PM" src="https://user-images.githubusercontent.com/66921930/99326333-234cf580-2846-11eb-9733-b33aa9a30679.png">
+
+<img width="622" alt="Screen Shot 2020-11-16 at 7 57 24 PM" src="https://user-images.githubusercontent.com/66921930/99326320-1b8d5100-2846-11eb-89e0-f8fcbb86a8b5.png">
 
 
 When expanded further into a correlation matrix, the relationship between abrasion loss,
@@ -210,3 +213,22 @@ in the matrix it is not as
 strong as the relationship
 between that of hardness and
 abrasion loss.
+
+<img width="462" alt="Screen Shot 2020-11-16 at 7 57 57 PM" src="https://user-images.githubusercontent.com/66921930/99326350-2811a980-2846-11eb-9b76-e825c7b97e2e.png">
+
+
+If the same methodology and coding, as showcased in Figure 19, is used to examine the
+“oddbooks” dataset, the output in Figure 20 is provided which showcases much more linear
+relationships found in each combination of the variables. What this depicts is the presence of a
+stronger correlation between most of the variable pairs.
+
+
+
+
+Again, when taking the dataset further, and utilizing a correlation matrix what can be
+seen in Figure 21, is that as the weight of a book increases so does the height and width. This
+trend is the opposite however for thickness which decreases as the weight of a book increases.
+This data point goes against logical rationale on how one would expect that particular relationship to behave. It is plausible that this is attributed to a sampling error, which could be
+due to the relatively small sample size. Perhaps, this is also why the dataset is labeled
+“oddbooks”.
+
