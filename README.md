@@ -262,18 +262,24 @@ descriptive statistics.
 
 A Research Guide. (2019). Descriptive Statistics – What is it and How to Use it. A Research
 Guide. Retrieved from: https://www.aresearchguide.com/a-descriptive-statistics.html
+
 Statistics Solutions. (2020). What is Multiple Linear Regression. Statistic Solutions. Retrieved
 from: https://www.statisticssolutions.com/what-is-multiple-linear-regression/
+
 Bluman, A. (2018). Elementary Statistics: A Step by Step Approach (10th ed.). New York, NY:
 McGraw-Hill Education.
 
 The Data Visualisation Catalogue. (n.d.). Density Plot. The Data Visualisation Catalogue.
 Retrieved from: https://datavizcatalogue.com/methods/density_plot.html
+
 Penn State. (2018). 2.1 – What is Simple Linear Regression. The Pennsylvania State University.
 Retrieved from: https://online.stat.psu.edu/stat462/node/91/
+
 Engineering Statistics Handbook. (n.d.). 1.3.3.21. Normal Probability Plot. Nist Sematech.
 Retrieved from: https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm
+
 Ford, C. (2015, August). Understanding Q-Q Plots. University of Virginia Library. Retrieved
 from: https://data.library.virginia.edu/understanding-q-q-plots/
+
 Grant, P. (2019, August). Understanding Multiple Regression. Medium. Retrieved from:
 https://towardsdatascience.com/understanding-multiple-regression-249b16bde83e
