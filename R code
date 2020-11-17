@@ -1,0 +1,210 @@
+#Part A:
+
+#1. Invoke R and use the "trees" dataset
+trees <- trees
+names(trees)[1]<-"Diameter"
+
+#2. Find the 5 summary numbers in the data
+summary(trees)
+fivenum(trees$Diameter)
+fivenum(trees$Height)
+fivenum(trees$Volume)
+
+#3. Graph a straight line regression
+plot(trees)
+pairs(trees,
+      panel = panel.smooth,
+      main = 'Trees Data')
+par(mfcol=c(2,2))
+
+#Diameter vs. Height
+plot(trees$Diameter, trees$Height, main = 'Diameter vs. Height',
+     xlab = 'Diameter (inches)', ylab = 'Height (ft)')
+abline(lm(Height~Diameter, data = trees), col = 'red')
+
+# Volume vs. Diameter
+plot(trees$Volume, trees$Diameter, main = 'Volume vs. Diameter',
+     xlab = 'Volume (cubic ft)', ylab = 'Diameter (inches)')
+abline(lm(Diameter~Volume, data = trees), col = 'red')
+
+
+#Height vs. Volume
+plot(trees$Height, trees$Volume, main = 'Height vs. Volume',
+     xlab = 'Height (ft)', ylab = 'Volume (cubic ft)')
+abline(lm(Volume~Height, data = trees), col = 'red')
+
+#4.  Histograms and density plot
+
+#Diameter
+hist(trees$Diameter, 
+     main = 'Histogram & Density of Trees: Diameter',
+     xlab = 'Diameter (inches)',
+     col = 'skyblue',
+     probability=TRUE)
+lines(density(trees$Diameter))
+
+#Height
+hist(trees$Height, 
+     main = 'Histogram & Density of Trees: Height',
+     xlab = 'Height (ft)',
+     col = 'skyblue',
+     probability=TRUE)
+lines(density(trees$Height))
+
+#Volume
+hist(trees$Volume, 
+     main = 'Histogram & Density of Trees: Volume',
+     xlab = 'Volume (cubic ft)',
+     col = 'skyblue',
+     probability=TRUE)
+lines(density(trees$Volume))
+
+#5. Create Boxplots
+attach(trees)
+par(mfrow=c(3,1))
+
+#Boxplot Diameter 
+boxplot(Diameter, horizontal = TRUE,
+        main = "Boxplot for Tree Diameter",
+        xlab = "Diameter (inches)")
+
+#Boxplot Height
+boxplot(Height, horizontal = TRUE,
+        main = "Boxplot for Tree Height",
+        xlab = "Height (ft)")
+
+#Boxplot Volume
+boxplot(Volume, horizontal = TRUE,
+        main = "Boxplot for Tree Volume",
+        xlab = "Volume (cubic ft)")
+
+#6. Normal probability plots 
+attach(trees)
+par(mfrow=c(2,2))
+
+#Q-Q Plot Diameter
+qqnorm(Diameter, main = "Diameter of Trees",
+       xlab = "",
+       ylab = "Diameter (inches)")
+
+qqline(Diameter, col='red')
+
+
+#Q-Q Plot Height
+qqnorm(Height, main = "Height of Trees",
+       xlab = "",
+       ylab = "Height (ft)")
+
+qqline(Height, col='red')
+
+#Q-Q Plot Volume
+qqnorm(Volume, main = "Volume of Trees",
+       xlab = "",
+       ylab = "Volume (cubic ft)")
+
+qqline(Volume, col = 'red')
+
+qqnorm(rnorm(31),
+       xlab = "",
+       ylab = "Simulated Values",
+       main = "Simulation")
+
+#Part B:
+
+#1. Load the MASS, ggplot2, and ggcorrplot libraries and use the "Rubber" data set.
+install.packages("MASS")
+install.packages("ggplot2")
+install.packages("ggcorrplot")
+library(MASS)
+library(ggplot2)
+library(ggcorrplot)
+Rubber
+names(Rubber)<-c("Loss","Hardness","Tensile")
+
+#2. Load the "oddbooks" data set
+install.packages("DAAG")
+library(DAAG)
+oddbooks
+names(oddbooks)<-c("Thickness", "Height","Width","Weight")
+
+#3. Build multiple regression models using summary(), log(), lm() and ggcorrplot()
+
+#Summary
+summary(Rubber)
+summary(oddbooks)
+
+#Log
+logRubber <- log(Rubber)
+logRubber.lml <- lm(Loss~Hardness,data=logRubber)
+summary(logRubber.lml)$coef
+logRubber.lml1 <- lm(Loss~Hardness+Tensile,data=logRubber)
+summary(logRubber.lml1)$coef
+
+logbooks <- log(oddbooks)
+logbooks.lml <- lm(Weight~Thickness,data=logbooks)
+summary(logbooks.lml)$coef
+logbooks.lm2 <- lm(Weight~Thickness+Height,data=logbooks)
+summary(logbooks.lm2)$coef
+logbooks.lm3 <- lm(Weight~Thickness+Height+Width,data=logbooks)
+summary(logbooks.lm3)$coef
+
+#Multiple Regression Formula
+Rubber.lm <- lm(Loss ~ Hardness + Tensile, data=Rubber)
+options(digits=3)
+summary(Rubber.lm)
+
+oddbooks.lm <- lm(Weight ~ Thickness + Height + Width, data=oddbooks)
+options(digits=4)
+summary(oddbooks.lm)
+
+#Term Plot for Regression Model
+par(mfrow=c(1,2))
+termplot(Rubber.lm, partial=TRUE, smooth=panel.smooth)
+par(mfrow=c(1,1))
+
+par(mfrow=c(1,2))
+termplot(oddbooks.lm, partial=TRUE, smooth=panel.smooth)
+par(mfrow=c(1,1))
+
+#Correlation Matrix
+plot(Rubber)
+corrRubber <- round(cor(Rubber), 1)
+ggcorrplot(corrRubber,
+           hc.order = TRUE,
+           type="lower",
+           outline.color = "white",
+           ggtheme = ggplot2::theme_gray,
+           colors = c("#6D9EC1","white","#E46726"),
+           lab = TRUE,
+           title = "Correlation between Variables in Rubber Dataset")
+logRubber <- log(Rubber)
+corrLogRubber <- round(cor(logRubber), 1)
+ggcorrplot(corrLogRubber,
+           hc.order = TRUE,
+           type="lower",
+           outline.color = "white",
+           ggtheme = ggplot2::theme_gray,
+           colors = c("#6D9EC1","white","#E46726"),
+           lab = TRUE,
+           title = "Correlation between Variables in Log Rubber Dataset")
+
+plot(oddbooks)
+corroddbooks <- round(cor(oddbooks), 1)
+ggcorrplot(corroddbooks,
+           hc.order = TRUE,
+           type="lower",
+           outline.color = "white",
+           ggtheme = ggplot2::theme_gray,
+           colors = c("#6D9EC1","white","#E46726"),
+           lab = TRUE,
+           title = "Correlation between Variables in Oddbooks Dataset")
+logbooks <- log(oddbooks)
+corrlogbooks <- round(cor(logbooks),1)
+ggcorrplot(corrlogbooks,
+           hc.order = TRUE,
+           type="lower",
+           outline.color = "white",
+           ggtheme = ggplot2::theme_gray,
+           colors = c("#6D9EC1","white","#E46726"),
+           lab = TRUE,
+           title = "Correlation between Variables in Log Oddbooks Dataset")
