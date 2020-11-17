@@ -222,7 +222,7 @@ If the same methodology and coding, as showcased in Figure 19, is used to examin
 relationships found in each combination of the variables. What this depicts is the presence of a
 stronger correlation between most of the variable pairs.
 
-
+<img width="692" alt="Screen Shot 2020-11-16 at 8 00 28 PM" src="https://user-images.githubusercontent.com/66921930/99326730-745ce980-2846-11eb-895c-47842de58f0f.png">
 
 
 Again, when taking the dataset further, and utilizing a correlation matrix what can be
@@ -232,3 +232,48 @@ This data point goes against logical rationale on how one would expect that part
 due to the relatively small sample size. Perhaps, this is also why the dataset is labeled
 “oddbooks”.
 
+<img width="594" alt="Screen Shot 2020-11-16 at 8 00 35 PM" src="https://user-images.githubusercontent.com/66921930/99326738-79219d80-2846-11eb-8624-b6f6eddbf719.png">
+
+# Conclusion
+
+A main component of the first module of Intermediate Analytics was utilizing numerical
+along with graphical representations to both demonstrate and understand if a dataset was
+normally distributed. Why this is important is because of the role normal distributions play in
+probability distributions in statistics. It is also an indicator for understanding the behavior of a
+dataset and allowing for predictions and error assumptions to be made when using further
+statistics tools. Another main component was recognizing correlations, trends, and or patterns
+that variables have on one another, whether singularly focused or as a collective.
+Due to the increase in parameters in a model when utilizing a multiple regression, more
+care is needed in the generation of the equation (Grant, 2019). A major consideration when
+developing multiple regression equations is the relationship between the predictor variables
+(independent). This is a measure of co-linearity and may affect how accurate the overall
+regression model is. In addition, while more terms will innately improve the fit certain terms
+may not have significance thereby rendering a lack of useful information (Grant,2019). The
+increased risk of overfitting also becomes a component, enabling false predictions to be made.
+The use of R as a way to provide the numerical and graphical data removes a large
+amount of manual calculation and visual building on a user. While the datasets used in this
+module were relatively small, the application can be approached the same way despite dataset
+size. The options for having a focused view on particular variables or bringing in 2 or more
+variables to establish relationships is straightforward when applying R coding. This module also
+helped establish the difference and benefit of both numerical and graphical data when employing
+descriptive statistics.
+
+# References:
+
+A Research Guide. (2019). Descriptive Statistics – What is it and How to Use it. A Research
+Guide. Retrieved from: https://www.aresearchguide.com/a-descriptive-statistics.html
+Statistics Solutions. (2020). What is Multiple Linear Regression. Statistic Solutions. Retrieved
+from: https://www.statisticssolutions.com/what-is-multiple-linear-regression/
+Bluman, A. (2018). Elementary Statistics: A Step by Step Approach (10th ed.). New York, NY:
+McGraw-Hill Education.
+
+The Data Visualisation Catalogue. (n.d.). Density Plot. The Data Visualisation Catalogue.
+Retrieved from: https://datavizcatalogue.com/methods/density_plot.html
+Penn State. (2018). 2.1 – What is Simple Linear Regression. The Pennsylvania State University.
+Retrieved from: https://online.stat.psu.edu/stat462/node/91/
+Engineering Statistics Handbook. (n.d.). 1.3.3.21. Normal Probability Plot. Nist Sematech.
+Retrieved from: https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm
+Ford, C. (2015, August). Understanding Q-Q Plots. University of Virginia Library. Retrieved
+from: https://data.library.virginia.edu/understanding-q-q-plots/
+Grant, P. (2019, August). Understanding Multiple Regression. Medium. Retrieved from:
+https://towardsdatascience.com/understanding-multiple-regression-249b16bde83e
