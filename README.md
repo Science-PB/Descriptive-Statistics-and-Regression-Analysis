@@ -156,6 +156,7 @@ decreases by 1.353. Variances are 0.38 and 0.33 respectively. Overall the summar
 not appear to represent a significant difference in the measuring unit and the relationship
 between the variables seems less proportional.
 
+<img width="616" alt="Screen Shot 2020-11-16 at 6 58 44 PM" src="https://user-images.githubusercontent.com/66921930/99322713-8fc3f680-283e-11eb-86f0-799ef9bf4f0d.png">
 
 
 Utilizing the same methods for “oddbooks” the results are broken out in Figure 13 to
@@ -166,3 +167,24 @@ variance factor. The final output through the use of the summary function indica
 proportional to the combination of thickness, height, and width which promotes the reason why
 the log function is needed on the “oddbooks” dataset.
 
+<img width="624" alt="Screen Shot 2020-11-16 at 7 04 14 PM" src="https://user-images.githubusercontent.com/66921930/99322720-95b9d780-283e-11eb-9afb-2fa8b1a85978.png">
+
+Continuing with numerical representation, the lm function combined with summary
+provides the coefficients of the variables for each dataset. Figure 14 and 15 showcase this for
+“Rubber” and “oddbooks” respectively. In regards to the “Rubber” dataset, the intercept or
+expected value of the average abrasion loss across all abrasion loss data points is 885.16. The coefficients, as displayed, are both negative which dictates that as the hardness and tensile
+strength of rubber increases, the abrasion loss decreases. With relatively low variance, as
+referenced via the standard error, a t-value far away from 0 and large compared to the standard
+error, as well as a significant p-value the indication is that a relationship exists. A prediction
+based on the normalized data is that a stronger tire will take longer to experience “wear and
+tear”.
+
+
+
+The “oddbooks” dataset based on the same methodology represents a positive change for
+both thickness and width to a book’s weight. In effect, as weight increases by 1 g, the thickness
+and width increase by 4.96 mm and 91.67 cm, respectively. Height on the other hand has the
+opposite result of decreasing by 21.95 cm for every 1 g of upward weight growth. Unlike the
+“Rubber” data set, the standard error of “oddbooks” suggests a relatively high level of variance.
+The t and p-values both indicate that a relationship exists. A prediction based on the normalized
+data is that as weight increases, so does thickness and width, while height decreases.
